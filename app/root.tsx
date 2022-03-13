@@ -9,13 +9,11 @@ import {
   useCatch,
 } from "remix";
 import type { MetaFunction } from "remix";
-import tailwindStyles from './styles/tailwind.css'
+import tailwindStyles from "../styles/tailwindStyles.css";
 
 export const links: LinksFunction = () => {
-  return [
-    {rel: 'stylesheet', href: tailwindStyles}
-  ]
-}
+  return [{ rel: "stylesheet", href: tailwindStyles }];
+};
 
 export const meta: MetaFunction = () => {
   return { title: "New Remix App" };
@@ -49,7 +47,7 @@ export default function App() {
   return (
     <Document>
       <Outlet />
-      <ScrollRestoration/>
+      <ScrollRestoration />
     </Document>
   );
 }
